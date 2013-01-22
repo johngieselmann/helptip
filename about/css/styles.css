@@ -1,0 +1,125 @@
+@CHARSET "UTF-8";
+/** CSS Document **/
+
+*{
+    margin:0;
+    padding:0;
+    text-decoration: none;
+    border:none;
+    font-family:Helvetica, Arial, sans-serif;
+    font-size:10px;
+    list-style-type:none;
+}
+body{
+    background:#f2f2f2;
+}
+p{
+    font-family:inherit;
+    font-size:inherit;
+    font-weight:inherit;
+    color:inherit;
+    padding:5px 0;
+}
+em,strong,a,ul,ol,li { font-size:1em; }
+
+a, a:hover, a:visited, a:active{
+    text-decoration:none;
+    color:#356fc7;
+}
+a:hover{
+    text-decoration:underline;
+}
+.default{
+    font-size:.8em;
+    color:#000;
+    margin:0 0 0 1%;
+}
+.example{
+    font-size:1.1em;
+    font-weight:bold;
+}
+
+#nav{
+    position:fixed;
+    top:20px;
+    left:20px;
+    width:200px;
+    padding:10px;
+    background:#ddd;
+}
+#nav ul{
+
+}
+#nav li{
+    display:block;
+    padding:5px 10px;
+}
+#nav li#nav-title{
+    font-size:2em;
+    color:#369;
+    font-weight:bold;
+    padding:5px;
+}
+#nav a,
+#nav a:visited,
+#nav a:active{
+    font-size:1.4em;
+    color:#333;
+}
+#nav a:hover{
+    color:#000;
+    border-bottom:1px solid #000;
+}
+#content{
+    margin:20px 50px 20px 260px;
+    background:#FFF;
+}
+.lesson-title{
+    padding:20px;
+    font-size:3em;
+    font-weight:bold;
+    border-top:1px solid #ddd;
+    color:#036;
+}
+.lesson-title#page-desc{
+    border:none;
+    padding:20px 20px 0 20px;
+}
+.lesson-content{
+    padding:15px 30px;
+    color:#666;
+}
+.lesson-point-title{
+    font-size:2em;
+    padding:5px 0;
+    color:#369;
+}
+.lesson-point-content{
+    padding:10px;
+    font-size:1.3em;
+    color:#333;
+}
+.lesson-point ul{
+    padding:5px 0;
+    margin:0 0 0 3%;
+}
+.lesson-point-image{
+    max-width:20%;
+    margin:30px 5%;
+}
+.lesson-point-example{
+    margin:0 1% 10px 1%;
+    border:1px solid #CCC;
+    font-size:1.2em;
+    padding:10px;
+    font-family:"Courier New",Courier,monospace;
+}
+.lesson-point-example textarea{
+    width:100%;
+    font-family:inherit;
+    font-size:inherit;
+    font-weight:inherit;
+}
+.reference-point{
+    padding:0 0 10px 0;
+}

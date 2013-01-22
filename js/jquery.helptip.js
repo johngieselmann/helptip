@@ -1,37 +1,16 @@
 /**
- * jQuery Plugin: helptip
- *  this plugin displays a "help tip" when hovering (for web) or tapping (for touch device) 
- *  the help tip content comes from the targeted element's title attribute
+ * Helptip - jQuery Plugin
+ * Displays a help tip for the target element(s) on hover or touch.
+ *
+ * Source files and information can be found here:
+ *  https://github.com/untapped/helptip
  *  
+ * Copyright (c) 2012 - 2013 Untapped Venue, LLC
+ * www.untappedvenue.com
  *
- * @author johng
- * @version 1.0 - 09.26.12
- * @version 1.1 - 11.20.12 - added enabled/disable methods
- *      
- * @param options
- *  object of options that user can pass in to configure the display of the help tip
- *      arrowWidth: (int) the px value of how wide to make the color arrow (arrow 3)
- *      helperClass: (string) the class applied to the helper
- *      helperId: (string) the id applied to the helper
- *      helperStyles: (object) associative array of inline styles and values to be applied to helper
- *      innerClass: (string) the class applied to the inner helper
- *      innerId: (string) the id applied to the inner helper
- *      innerStyles: (object) associative array of inline styles and values to be applied to inner helper
- *      onHide: (function) callback function executed when helper is hidden
- *          params passed in -> (event,[target element], [helper])
- *      onShow: (function) callback function executed when helper is shown
- *          params passed in -> (event,[target element], [helper])
- *      position: (string) where to position the helper in relation to the targeted element 
- *          ['top-left','top-center','top-right','right','bottom-right','bottom-center','bottom-left','left']
- *      showArrow: (boolean) whether or not to show the arrow
- *          true = show the arrow | false = do not show the arrow
- *      showHidden: (boolean) whether or not to ignore hidden elements
- *          true = show tip on opaque elements | false = do not show tip on opaque elements
- *      spacing: (int) number of pixel spacing between the helper and the targeted element  
+ * Version: 1.0
+ * Requires : jQuery Version 1.4.2 + (this is what it was built on)
  *
- * @methods (intended to be called by user)
- *      disable: disables the showing of the helptip
- *      enable: enables the showing of the helptip, intended to be used concurrently with disable
  */
 
 (function($){
