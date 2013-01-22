@@ -1,0 +1,2 @@
+Helptip jQuery Plugin
+=====================
