@@ -12,7 +12,9 @@ Include these files in your project:
 - jquery.helptip.min.js
 - jquery.helptip.css
 
-Call the helptip function on a targeted element: `$('.example').helptip();`
+Call the helptip function on a targeted element: 
+
+    $('.example').helptip();
 
 
 Options
@@ -84,7 +86,7 @@ Whether or not to ignore elements with opacity styles.
 
 The number of pixels of spacing between the helper and the targeted element.
 
-<script>
+
     var options = {
         arrowWidth: 3,
         helperClass: 'helptip',
@@ -104,7 +106,6 @@ The number of pixels of spacing between the helper and the targeted element.
     };
     
     var helptip = $('.example').helptip(options);
-</script>
 
 
 Callbacks
@@ -129,7 +130,6 @@ The onShow method passes in three parameters: (event,target,helper)
 - **target:** the jQuery object of the element(s) targeted for the help tip
 - **helper:** the jQuery object of the helper
 
-<script>
     var onHideCallback = function(event, target, helper) {
         //do work here
     };
@@ -144,7 +144,6 @@ The onShow method passes in three parameters: (event,target,helper)
     };
     
     var helptip = $('.example').helptip(callbacks);
-</script>
 
 
 Methods
@@ -159,7 +158,7 @@ Calling this method disables the showing of the help tip during hover.
 
 Calling this method enables the showing of the help tip if it had been previously disabled. By default, the help tip is enabled.
 
-<script>
+
     var helptip = $('.example').helptip();
     
     function toggleHelptip() {
@@ -172,4 +171,3 @@ Calling this method enables the showing of the help tip if it had been previousl
         }
     
     }
-</script>
