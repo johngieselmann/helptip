@@ -40,7 +40,7 @@ The ID applied to the helper.
 
 **helperStyles (object)** _default: { }_
 
-Associative array of inline styles and values to be applied to the helper that override the style sheet. These styles are applied with the jQuery .css() method and should match the optional object parameter passed into it.
+Associative array of inline styles and values to be applied to the helper that override the style sheet. These styles are applied with the jQuery .css() function and should match the optional object parameter passed into it.
 
 
 **innerClass (string)** _default: 'helptip-inner'_
@@ -55,7 +55,7 @@ The ID applied to the inner helper.
 
 **innerStyles (object)** _default: { }_
 
-Associative array of inline styles and values to be applied to the inner helper that override the style sheet. These styles are applied with the jQuery .css() method and should match the optional object parameter passed into it.
+Associative array of inline styles and values to be applied to the inner helper that override the style sheet. These styles are applied with the jQuery .css() function and should match the optional object parameter passed into it.
 
 
 **position (string)** _default: 'top-center'_
@@ -118,7 +118,7 @@ Callbacks
 
 Callback function executed with the helper is hidden. It is only executed if the user passes in a function to be called.
 
-The onHide method passes in three parameters: (event,target,helper)
+The onHide function receives three parameters: (event,target,helper)
 - **event:** the triggered event passed from jQuery
 - **target:** the jQuery object of the element(s) targeted for the help tip
 - **helper:** the jQuery object of the helper
@@ -128,10 +128,12 @@ The onHide method passes in three parameters: (event,target,helper)
 
 Callback function executed with the helper is shown. It is only executed if the user passes in a function to be called.
 
-The onShow method passes in three parameters: (event,target,helper)
+The onShow function receives three parameters: (event,target,helper)
 - **event:** the triggered event passed from jQuery
 - **target:** the jQuery object of the element(s) targeted for the help tip
 - **helper:** the jQuery object of the helper
+
+
 
     var onHideCallback = function(event, target, helper) {
         //do work here
