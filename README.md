@@ -9,8 +9,8 @@ How to Use
 
 Include these files in your project:
 
-* jquery.helptip.min.js
-* jquery.helptip.css
+- jquery.helptip.min.js
+- jquery.helptip.css
 
 Call the helptip function on a targeted element: `$('.example').helptip();`
 
@@ -18,28 +18,43 @@ Call the helptip function on a targeted element: `$('.example').helptip();`
 Options
 -------
 
-*arrowWidth (int)* +default: 7+
+**arrowWidth (int)** _default: 7_
+
 The pixel value of how wide to make the arrow.
 
-*helperClass (string)* +default: 'helptip'+
+
+**helperClass (string)** _default: 'helptip'_
+
 The class applied to the helper.
 
-*helperId (string)* +default: 'helptip'+
+
+**helperId (string)** _default: 'helptip'_
+
 The ID applied to the helper.
 
-*helperStyles (object)* +default: { }+
+
+**helperStyles (object)** _default: { }_
+
 Associative array of inline styles and values to be applied to the helper that override the style sheet. These styles are applied with the jQuery .css() method and should match the optional object parameter passed into it.
 
-*innerClass (string)* +default: 'helptip-inner'+
+
+**innerClass (string)** _default: 'helptip-inner'_
+
 The class applied to the inner helper.
 
-*innerId (string)* +default: 'helptip-inner'+
+
+**innerId (string)** _default: 'helptip-inner'_
+
 The ID applied to the inner helper.
 
-*innerStyles (object)* +default: { }+
+
+**innerStyles (object)** _default: { }_
+
 Associative array of inline styles and values to be applied to the inner helper that override the style sheet. These styles are applied with the jQuery .css() method and should match the optional object parameter passed into it.
 
-*position (string)* +default: 'top-center'+
+
+**position (string)** _default: 'top-center'_
+
 Where to position the helper in relation to the targeted element. Possible values:
 - top-left
 - top-center
@@ -50,20 +65,26 @@ Where to position the helper in relation to the targeted element. Possible value
 - bottom-center
 - bottom-right
 
-*showArrow (boolean)* +default: true+
+
+**showArrow (boolean)** _default: true_
+
 Whether or not to show the arrow.
-- *true:* show the arrow
-- *false:* do not show the arrow
+- **true:** show the arrow
+- **false:** do not show the arrow
 
-*showHidden (boolean)* +default: false+
+
+**showHidden (boolean)** _default: false_
+
 Whether or not to ignore elements with opacity styles.
-- *true:* show the tip on non-visible elements
-- *false:* do not show the tip on non-visible elements
+- **true:** show the tip on non-visible elements
+- **false:** do not show the tip on non-visible elements
 
-*spacing (int)* +default: 3+
+
+**spacing (int)** _default: 3_
+
 The number of pixels of spacing between the helper and the targeted element.
 
-`
+<script>
     var options = {
         arrowWidth: 3,
         helperClass: 'helptip',
@@ -83,30 +104,32 @@ The number of pixels of spacing between the helper and the targeted element.
     };
     
     var helptip = $('.example').helptip(options);
-`
+</script>
 
 
 Callbacks
 ---------
 
-*onHide (function)* +default: false+
+**onHide (function)** _default: false_
+
 Callback function executed with the helper is hidden. It is only executed if the user passes in a function to be called.
 
 The onHide method passes in three parameters: (event,target,helper)
-- *event:* the triggered event passed from jQuery
-- *target:* the jQuery object of the element(s) targeted for the help tip
-- *helper:* the jQuery object of the helper
+- **event:** the triggered event passed from jQuery
+- **target:** the jQuery object of the element(s) targeted for the help tip
+- **helper:** the jQuery object of the helper
 
-*onShow (function)* +default: false+
+
+**onShow (function)** _default: false_
+
 Callback function executed with the helper is shown. It is only executed if the user passes in a function to be called.
 
 The onShow method passes in three parameters: (event,target,helper)
-                            <ul>
-- *event:* the triggered event passed from jQuery
-- *target:* the jQuery object of the element(s) targeted for the help tip
-- *helper:* the jQuery object of the helper
+- **event:** the triggered event passed from jQuery
+- **target:** the jQuery object of the element(s) targeted for the help tip
+- **helper:** the jQuery object of the helper
 
-`
+<script>
     var onHideCallback = function(event, target, helper) {
         //do work here
     };
@@ -121,19 +144,22 @@ The onShow method passes in three parameters: (event,target,helper)
     };
     
     var helptip = $('.example').helptip(callbacks);
-`
+</script>
 
 
 Methods
 -------
 
-*disable()*
+**disable()**
+
 Calling this method disables the showing of the help tip during hover.
 
-*enable()*
+
+**enable()**
+
 Calling this method enables the showing of the help tip if it had been previously disabled. By default, the help tip is enabled.
 
-`
+<script>
     var helptip = $('.example').helptip();
     
     function toggleHelptip() {
@@ -146,4 +172,4 @@ Calling this method enables the showing of the help tip if it had been previousl
         }
     
     }
-`
+</script>
