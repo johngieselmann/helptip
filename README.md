@@ -1,234 +1,149 @@
-<h1>Helptip jQuery Plugin</h1>
+Helptip jQuery Plugin
+=====================
 
-<p>This is a jQuery plugin that generates a "help tip" for the targeted element(s). The content for the help tip comes from the title attribute of the targeted element(s).</p>
+This is a jQuery plugin that generates a "help tip" for the targeted element(s). The content for the help tip comes from the title attribute of the targeted element(s).
 
-<h2>How it Works</h2>
 
-<p>
+How to Use
+----------
 
-<h2>How to Use</h2>
+Include these files in your project:
 
-<p>Include these files in your project:</p>
+* jquery.helptip.min.js
+* jquery.helptip.css
 
-<ul>
-    <li>jquery.helptip.min.js</li>
-    <li>jquery.helptip.css</li>
-</ul>
+Call the helptip function on a targeted element: `$('.example').helptip();`
 
-<p>Call the helptip function on a targeted element.</p>
-<p><code>$('.example').helptip();</code></p>
 
-<h2>Options</h2>
+Options
+-------
 
-<p>
-</p>
-            <a name="options"></a>
-            <div class="lesson">
-                <div class="lesson-title">Options</div>
-                <div class="lesson-content">
-                    <div class="lesson-point">
-                        <div class="lesson-point-title">arrowWidth (int)<span class="default">default: 7</span></div>
-                        <div class="lesson-point-content">
-                            <p>The pixel value of how wide to make the arrow.</p>
-                        </div>
-                        <div class="lesson-point-example">
-                            var options = { arrowWidth: 3 };<br />
-                            var helptip = $('.element').helptip(options);
-                        </div>
-                    </div>
-                    <div class="lesson-point">
-                        <div class="lesson-point-title">helperClass (string)<span class="default">default: 'helptip'</span></div>
-                        <div class="lesson-point-content">
-                            <p>The class applied to the helper.</p>
-                        </div>
-                        <div class="lesson-point-example">
-                            var options = { helperClass: 'helptip' };<br />
-                            var helptip = $('.element').helptip(options);
-                        </div>
-                    </div>
-                    <div class="lesson-point">
-                        <div class="lesson-point-title">helperId (string)<span class="default">default: 'helptip'</span></div>
-                        <div class="lesson-point-content">
-                            <p>The ID applied to the helper.</p>
-                        </div>
-                        <div class="lesson-point-example">
-                            var options = { helperId: 'helptip' };<br />
-                            var helptip = $('.element').helptip(options);
-                        </div>
-                    </div>
-                    <div class="lesson-point">
-                        <div class="lesson-point-title">helperStyles (object)<span class="default">default: { }</span></div>
-                        <div class="lesson-point-content">
-                            <p>Associative array of inline styles and values to be applied to the helper that override the style sheet. These styles are applied with the jQuery .css() method and should match the optional object parameter passed into it.</p>
-                        </div>
-                        <div class="lesson-point-example">
-                            var options = { helperStyles: {'border':'1px solid #000'} };<br />
-                            var helptip = $('.element').helptip(options);
-                        </div>
-                    </div>
-                    <div class="lesson-point">
-                        <div class="lesson-point-title">innerClass (string)<span class="default">default: 'helptip-inner'</span></div>
-                        <div class="lesson-point-content">
-                            <p>The class applied to the inner helper.</p>
-                        </div>
-                        <div class="lesson-point-example">
-                            var options = { innerClass: 'helptip-inner' };<br />
-                            var helptip = $('.element').helptip(options);
-                        </div>
-                    </div>
-                    <div class="lesson-point">
-                        <div class="lesson-point-title">innerId (string)<span class="default">default: 'helptip-inner'</span></div>
-                        <div class="lesson-point-content">
-                            <p>The ID applied to the inner helper.</p>
-                        </div>
-                        <div class="lesson-point-example">
-                            var options = { innerId: 'helptip-inner' };<br />
-                            var helptip = $('.element').helptip(options);
-                        </div>
-                    </div>
-                    <div class="lesson-point">
-                        <div class="lesson-point-title">innerStyles (object)<span class="default">default: { }</span></div>
-                        <div class="lesson-point-content">
-                            <p>Associative array of inline styles and values to be applied to the inner helper that override the style sheet. These styles are applied with the jQuery .css() method and should match the optional object parameter passed into it.</p>
-                        </div>
-                        <div class="lesson-point-example">
-                            var options = { innerStyles: {'border':'1px solid #000'} };<br />
-                            var helptip = $('.element').helptip(options);
-                        </div>
-                    </div>
-                    <div class="lesson-point">
-                        <div class="lesson-point-title">position (string)<span class="default">default: 'top-center'</span></div>
-                        <div class="lesson-point-content">
-                            <p>Where to position the helper in relation to the targeted element. Possible values:</p>
+*arrowWidth (int)* +default: 7+
+The pixel value of how wide to make the arrow.
+
+*helperClass (string)* +default: 'helptip'+
+The class applied to the helper.
+
+*helperId (string)* +default: 'helptip'+
+The ID applied to the helper.
+
+*helperStyles (object)* +default: { }+
+Associative array of inline styles and values to be applied to the helper that override the style sheet. These styles are applied with the jQuery .css() method and should match the optional object parameter passed into it.
+
+*innerClass (string)* +default: 'helptip-inner'+
+The class applied to the inner helper.
+
+*innerId (string)* +default: 'helptip-inner'+
+The ID applied to the inner helper.
+
+*innerStyles (object)* +default: { }+
+Associative array of inline styles and values to be applied to the inner helper that override the style sheet. These styles are applied with the jQuery .css() method and should match the optional object parameter passed into it.
+
+*position (string)* +default: 'top-center'+
+Where to position the helper in relation to the targeted element. Possible values:
+- top-left
+- top-center
+- top-right
+- right
+- left
+- bottom-left
+- bottom-center
+- bottom-right
+
+*showArrow (boolean)* +default: true+
+Whether or not to show the arrow.
+- *true:* show the arrow
+- *false:* do not show the arrow
+
+*showHidden (boolean)* +default: false+
+Whether or not to ignore elements with opacity styles.
+- *true:* show the tip on non-visible elements
+- *false:* do not show the tip on non-visible elements
+
+*spacing (int)* +default: 3+
+The number of pixels of spacing between the helper and the targeted element.
+
+`
+    var options = {
+        arrowWidth: 3,
+        helperClass: 'helptip',
+        helperId: 'helptip',
+        helperStyles: {
+            'border': '1px solid #000'
+        },
+        innerClass: 'helptip-inner',
+        innerId: 'helptip-inner',
+        innerStyles: {
+            'border': '1px solid #000'            
+        },
+        position: 'top-center',
+        showArrow: true,
+        showHidden: false,
+        spacing: 3        
+    };
+    
+    var helptip = $('.example').helptip(options);
+`
+
+
+Callbacks
+---------
+
+*onHide (function)* +default: false+
+Callback function executed with the helper is hidden. It is only executed if the user passes in a function to be called.
+
+The onHide method passes in three parameters: (event,target,helper)
+- *event:* the triggered event passed from jQuery
+- *target:* the jQuery object of the element(s) targeted for the help tip
+- *helper:* the jQuery object of the helper
+
+*onShow (function)* +default: false+
+Callback function executed with the helper is shown. It is only executed if the user passes in a function to be called.
+
+The onShow method passes in three parameters: (event,target,helper)
                             <ul>
-                                <li><strong>top-left</strong></li>
-                                <li><strong>top-center</strong></li>
-                                <li><strong>top-right</strong></li>
-                                <li><strong>right</strong></li>
-                                <li><strong>left</strong></li>
-                                <li><strong>bottom-left</strong></li>
-                                <li><strong>bottom-center</strong></li>
-                                <li><strong>bottom-right</strong></li>
-                            </ul>
-                        </div>
-                        <div class="lesson-point-example">
-                            var options = { position: 'top-center' };<br />
-                            var helptip = $('.element').helptip(options);
-                        </div>
-                    </div>
-                    <div class="lesson-point">
-                        <div class="lesson-point-title">showArrow (boolean)<span class="default">default: true</span></div>
-                        <div class="lesson-point-content">
-                            <p>Whether or not to show the arrow.</p>
-                            <ul>
-                                <li><strong>true</strong>: show the arrow</li>
-                                <li><strong>false</strong>: do not show the arrow</li>
-                            </ul>
-                        </div>
-                        <div class="lesson-point-example">
-                            var options = { showArrow: true };<br />
-                            var helptip = $('.element').helptip(options);
-                        </div>
-                    </div>
-                    <div class="lesson-point">
-                        <div class="lesson-point-title">showHidden (boolean)<span class="default">default: false</span></div>
-                        <div class="lesson-point-content">
-                            <p>Whether or not to ignore elements hidden with opacity style.</p>
-                            <ul>
-                                <li><strong>true</strong>: show the tip on non-visible elements</li>
-                                <li><strong>false</strong>: do not show the tip on non-visible elements</li>
-                            </ul>
-                        </div>
-                        <div class="lesson-point-example">
-                            var options = { showHidden: false };<br />
-                            var helptip = $('.element').helptip(options);
-                        </div>
-                    </div>
-                    <div class="lesson-point">
-                        <div class="lesson-point-title">spacing (int)<span class="default">default: 3</span></div>
-                        <div class="lesson-point-content">
-                            <p>The number of pixels of spacing between the helper and the targeted element.</p>
-                        </div>
-                        <div class="lesson-point-example">
-                            var options = { spacing: 3 };<br />
-                            var helptip = $('.element').helptip(options);
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <a name="callbacks"></a>
-            <div class="lesson">
-                <div class="lesson-title">Callbacks</div>
-                <div class="lesson-content">
-                    <div class="lesson-point">
-                        <div class="lesson-point-title">onHide (function)<span class="default">default: false</span></div>
-                        <div class="lesson-point-content">
-                            <p>Callback function executed with the helper is hidden. It is only executed if the user passes in a function to be called.</p>
-                            <p>The onHide method passes in three parameters: (event,target,helper)</p>
-                            <ul>
-                                <li><strong>event</strong>: the triggered event passed from jQuery</li>
-                                <li><strong>target</strong>: the jQuery object of the element(s) targeted for the help tip</li>
-                                <li><strong>helper</strong>: the jQuery object of the helper</li>
-                            </ul>
-                        </div>
-                        <div class="lesson-point-example">
-                            var callback = function(event,target,helper){<br/>
-                            &nbsp;&nbsp;&nbsp;&nbsp;console.log(event);<br />
-                            &nbsp;&nbsp;&nbsp;&nbsp;console.log(target);<br />
-                            &nbsp;&nbsp;&nbsp;&nbsp;console.log(helper);<br />
-                            };<br />
-                            var helptip = $('.element').helptip({ onHide: callback });
-                        </div>
-                    </div>
-                    <div class="lesson-point">
-                        <div class="lesson-point-title">onShow (function)<span class="default">default: false</span></div>
-                        <div class="lesson-point-content">
-                            <p>Callback function executed with the helper is shown. It is only executed if the user passes in a function to be called.</p>
-                            <p>The onShow method passes in three parameters: (event,target,helper)</p>
-                            <ul>
-                                <li><strong>event</strong>: the triggered event passed from jQuery</li>
-                                <li><strong>target</strong>: the jQuery object of the element(s) targeted for the help tip</li>
-                                <li><strong>helper</strong>: the jQuery object of the helper</li>
-                            </ul>
-                        </div>
-                        <div class="lesson-point-example">
-                            var callback = function(event,target,helper){<br/>
-                            &nbsp;&nbsp;&nbsp;&nbsp;console.log(event);<br />
-                            &nbsp;&nbsp;&nbsp;&nbsp;console.log(target);<br />
-                            &nbsp;&nbsp;&nbsp;&nbsp;console.log(helper);<br />
-                            };<br />
-                            var helptip = $('.element').helptip({ onShow: callback });
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <a name="methods"></a>
-            <div class="lesson">
-                <div class="lesson-title">Methods</div>
-                <div class="lesson-content">
-                    <div class="lesson-point">
-                        <div class="lesson-point-title">disable()</div>
-                        <div class="lesson-point-content">
-                            <p>Calling this method disables the showing of the help tip.</p>
-                        </div>
-                        <div class="lesson-point-example">
-                            var helptip = $('.element').helptip();<br />
-                            helptip.disable();
-                        </div>
-                    </div>                
-                    <div class="lesson-point">
-                        <div class="lesson-point-title">enable()</div>
-                        <div class="lesson-point-content">
-                            <p>Calling this method enables the showing of the help tip if it had been previously disabled.</p>
-                        </div>
-                        <div class="lesson-point-example">
-                            var helptip = $('.element').helptip();<br />
-                            helptip.enable();
-                        </div>
-                    </div>                
-                </div>
-            </div>
-        </div>
-    </div>
-</body>
-</html>
+- *event:* the triggered event passed from jQuery
+- *target:* the jQuery object of the element(s) targeted for the help tip
+- *helper:* the jQuery object of the helper
+
+`
+    var onHideCallback = function(event, target, helper) {
+        //do work here
+    };
+    
+    var onShowCallback = function(event, target, helper) {
+        //do work here
+    };
+    
+    var callbacks = {
+        'onHide': onHideCallback,
+        'onShow': onShowCallback
+    };
+    
+    var helptip = $('.example').helptip(callbacks);
+`
+
+
+Methods
+-------
+
+*disable()*
+Calling this method disables the showing of the help tip during hover.
+
+*enable()*
+Calling this method enables the showing of the help tip if it had been previously disabled. By default, the help tip is enabled.
+
+`
+    var helptip = $('.example').helptip();
+    
+    function toggleHelptip() {
+    
+        if (disabled) {
+            helptip.enable();
+        }
+        else {
+            helptip.disable();
+        }
+    
+    }
+`
