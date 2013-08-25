@@ -1,14 +1,17 @@
 Helptip jQuery Plugin
 =====================
 
-This is a jQuery plugin that generates a "help tip" for the targeted element(s). The content for the help tip comes from the title attribute of the targeted element(s).
+This is a jQuery plugin that generates a "help tip" for the targeted element(s) when hovered over. The content for the help tip comes from the title attribute of the targeted element(s).
+
+Requirements
+------------
+- jQuery v1.4.2+
 
 
 How to Use
 ----------
 
 Include these files in your project:
-
 - jquery.helptip.min.js
 - jquery.helptip.css
 
@@ -20,9 +23,8 @@ Call the helptip function on a targeted element:
 Options
 -------
 
-**arrowWidth (int)** _default: 7_
-
-The pixel value of how wide to make the arrow.
+>**arrowWidth (int)** _default: 7_
+>The pixel value of how wide to make the arrow.
 
 
 **helperClass (string)** _default: 'helptip'_
