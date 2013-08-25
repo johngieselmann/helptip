@@ -89,7 +89,7 @@ Whether or not to ignore elements with opacity styles.
 
 The number of pixels of spacing between the helper and the targeted element.
 
-**Example:**
+### Example
 
     var options = {
         arrowWidth: 3,
@@ -135,7 +135,7 @@ The onShow function receives three parameters: (event,target,helper)
 - **helper:** the jQuery object of the helper
 
 
-**Example:**
+### Example
 
     var onHideCallback = function(event, target, helper) {
         //do work here
@@ -165,7 +165,7 @@ Calling this method disables the showing of the help tip during hover.
 
 Calling this method enables the showing of the help tip if it had been previously disabled. By default, the help tip is enabled.
 
-**Example:**
+### Example
 
     var helptip = $('.example').helptip();
     
