@@ -24,6 +24,7 @@ Options
 -------
 
 >**arrowWidth (int)** _default: 7_
+>
 >The pixel value of how wide to make the arrow.
 
 
